@@ -1,0 +1,11 @@
+.task {
+  color: #008080;
+}
+.submit_button {
+  background-color: #e6e6fa;
+  border-radius:10px 10px;
+}
+
+.submit_button:hover{
+  opacity: 0.5
+}

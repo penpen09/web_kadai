@@ -7,7 +7,7 @@ server = WEBrick::HTTPServer.new({#インスタンスを作成してserver変数
 ['INT', 'TERM'].each {|signal|
   Signal.trap(signal){ server.shutdown }
 }
-server.mount('/', WEBrick::HTTPServlet::ERBHandler, 'index.html.erb')
+server.mount('/', WEBrick::HTTPServlet::ERBHandler, 'index.html.erb')#'/'でURLが送信される
 server.mount('/test', WEBrick::HTTPServlet::ERBHandler, 'test.html.erb')#./testというURLが送信される
 server.mount('/kadai', WEBrick::HTTPServlet::ERBHandler, 'kadai.html.erb')#./testというURLが送信される
 server.mount('/indicate.cgi', WEBrick::HTTPServlet::CGIHandler, 'indicate.rb')#htmlのformをindicate.rbに送ることができる
